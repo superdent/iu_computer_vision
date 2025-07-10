@@ -1,2 +1,6 @@
 venv/
 .idea/
+/datasets/yolo_training_filter/
+/datasets/yolo_training_full/
+/datasets/ppm/
+/datasets/jpg/
