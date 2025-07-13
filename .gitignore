@@ -2,5 +2,13 @@ venv/
 .idea/
 /datasets/yolo_training_filter/
 /datasets/yolo_training_full/
+/datasets/yolo_training/
 /datasets/ppm/
 /datasets/jpg/
+
+/notebook/input_videos
+
+/yolo_training/yolov5
+
+*.pt
+*.zip

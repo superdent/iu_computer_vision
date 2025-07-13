@@ -1,5 +1,5 @@
-train: C:/Develop/Python/PyCharmProjects/iu_computer_vision/datasets/yolo_training_filter/train/images
-val: C:/Develop/Python/PyCharmProjects/iu_computer_vision/datasets/yolo_training_filter/val/images
+train: ../../datasets/yolo_training_filter/train/images
+val: ../../datasets/yolo_training_filter/val/images
 
 nc: 43
 names:

@@ -3,8 +3,8 @@ import shutil
 from pathlib import Path
 
 # HART KODIERTE PFADANGABEN
-SOURCE_DIR = Path(r"..\datasets\jpg")
-TARGET_DIR = Path(r"..\datasets\yolo_training")
+SOURCE_DIR = Path("./datasets/jpg")
+TARGET_DIR = Path("./datasets/yolo_training")
 
 # Verhältnis Training/Validierung
 TRAIN_RATIO = 0.8

@@ -5,8 +5,8 @@ from PIL import Image
 from pathlib import Path
 
 # HART KODIERTE PFADANGABEN
-INPUT_ROOT = Path(r"..\datasets\ppm")
-OUTPUT_ROOT = Path(r"..\datasets\jpg")
+INPUT_ROOT = Path("./datasets/ppm")
+OUTPUT_ROOT = Path("./datasets/jpg")
 
 def ppm_to_jpg(ppm_path, jpg_path):
     with Image.open(ppm_path) as img:
