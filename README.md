@@ -54,3 +54,7 @@
 - Der Trainingsprozess wurde erfolgreich gestartet, nachdem alle Label-Klassen zur YAML-Datei gepasst haben.
 - Probleme mit inkonsistenten Klassen-IDs konnten durch die vollständige Klassenliste behoben werden.
 - Erste Experimente laufen mit dem `yolov5s.pt`-Modell.
+
+### 9. Befehle
+- source .venv_yolo/bin/activate
+- python ./yolov5/train.py --img 640 --batch 16 --epochs 50 --data ./yolo_training.yaml --weights yolov5s.pt --name verkehrszeichen-neu
