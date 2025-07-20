@@ -1,0 +1,48 @@
+path: ../datasets/yolo_training
+train: train/images
+val: val/images
+nc: 43
+names:
+  - speed_limit_20
+  - speed_limit_30
+  - speed_limit_50
+  - speed_limit_60
+  - speed_limit_70
+  - speed_limit_80
+  - end_speed_limit_80
+  - speed_limit_100
+  - speed_limit_120
+  - no_overtaking
+  - no_overtaking_trucks
+  - priority_at_next_intersection
+  - priority_road
+  - give_way
+  - stop
+  - no_entry
+  - no_trucks
+  - no_entry_both_directions
+  - general_caution
+  - curve_left
+  - curve_right
+  - double_curve
+  - uneven_road
+  - slippery_road
+  - road_narrows
+  - roadworks
+  - traffic_signal
+  - pedestrian_crossing
+  - children
+  - bikes
+  - snow
+  - wild_animals
+  - no_speed_limit_overtake
+  - turn_right
+  - turn_left
+  - go_straight
+  - go_straight_or_right
+  - go_straight_or_left
+  - keep_right
+  - keep_left
+  - roundabout
+  - end_no_overtaking
+  - end_no_overtaking_trucks
