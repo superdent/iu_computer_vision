@@ -1,4 +1,4 @@
-path: ../datasets/yolo_training
+path: ../datasets/yolo_training_filter
 train: train/images
 val: val/images
 nc: 43

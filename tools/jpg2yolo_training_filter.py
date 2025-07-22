@@ -16,7 +16,7 @@ def prepare_dirs(base_dir):
             path.mkdir(parents=True, exist_ok=True)
 
 def get_image_label_pairs(source_root):
-    allowed_classes = {"11", "12", "13", "14"}
+    allowed_classes = {"14"}
     pairs = []
     current_dir = None
 
