@@ -1,5 +1,6 @@
 venv/
 .idea/
+.vscode
 /datasets/yolo_training_filter/
 /datasets/yolo_training_full/
 /datasets/yolo_training/
@@ -9,6 +10,11 @@ venv/
 /notebook/input_videos
 
 /yolo_training/yolov5
+/yolo_training_v8/runs
+/runs
 
 *.pt
 *.zip
+*.mp4
+
+.DS_Store
