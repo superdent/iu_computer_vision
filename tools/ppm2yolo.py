@@ -37,18 +37,15 @@ def read_annotations(input_root):
 def split_annotations(annotations):
     from random import Random
     rand = Random(RANDOM_SEED)
-
     class_to_annots = defaultdict(list)
     for row in annotations:
         class_to_annots[row['ClassId']].append(row)
-
     train_set, val_set = [], []
     for class_id, items in class_to_annots.items():
         rand.shuffle(items)
         split_point = int(len(items) * TRAIN_RATIO)
         train_set.extend(items[:split_point])
         val_set.extend(items[split_point:])
-
     return train_set, val_set
 
 def prepare_output_dirs(root):
@@ -58,13 +55,22 @@ def prepare_output_dirs(root):
             path.mkdir(parents=True, exist_ok=True)
 
 def convert_and_write(rows, output_root, split):
+    count = 0
+    collisions = 0
     for row in rows:
         ppm_path = row['FullPath']
         label = row['ClassId']
-        jpg_name = ppm_path.name.replace('.ppm', '.jpg')
+        prefix = ppm_path.parent.name
+        stem = ppm_path.stem  # ohne Erweiterung
+        jpg_name = f"{prefix}_{stem}.jpg"
+        txt_name = f"{prefix}_{stem}.txt"
 
         output_img_path = output_root / split / 'images' / jpg_name
-        output_lbl_path = output_root / split / 'labels' / jpg_name.replace('.jpg', '.txt')
+        output_lbl_path = output_root / split / 'labels' / txt_name
+
+        if output_img_path.exists() or output_lbl_path.exists():
+            print(f"Warnung: {jpg_name} wird überschrieben!")
+            collisions += 1
 
         ppm_to_jpg(ppm_path, output_img_path)
 
@@ -82,6 +88,9 @@ def convert_and_write(rows, output_root, split):
         with open(output_lbl_path, 'w') as f:
             f.write(f"{label} {x_center:.6f} {y_center:.6f} {width:.6f} {height:.6f}\n")
 
+        count += 1
+    print(f"{split.capitalize()}: {count} Dateien geschrieben, {collisions} Kollisionen")
+
 def process_dataset(input_root, output_root):
     if output_root.exists():
         shutil.rmtree(output_root)
@@ -89,7 +98,7 @@ def process_dataset(input_root, output_root):
 
     print("Lese Annotationen...")
     annotations = read_annotations(input_root)
-    print(f"Gefundene Annotationen: {len(annotations)}")
+    print(f"Gefundene Annotationen (gesamt): {len(annotations)}")
 
     print("Splitte Daten klassenweise und deterministisch...")
     train_set, val_set = split_annotations(annotations)
