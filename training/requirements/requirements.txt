@@ -1,4 +1,3 @@
 ultralytics
-yolov5
 torch
 torchvision
