@@ -1,7 +1,7 @@
 # training/configs/data.yaml
-path: training/gtsrb/yolo_training
-train: images/train
-val: images/val
+path: ../gtsrb/yolo_training
+train: train/images
+val: val/images
 
 nc: 43
 names:
