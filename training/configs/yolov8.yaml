@@ -1,0 +1,11 @@
+# training/configs/yolov8.yaml
+task: detect
+mode: train
+model: yolov8n.pt
+data: training/configs/data.yaml
+epochs: 5
+imgsz: 640
+batch: 16
+seed: 42
+project: training/runs/v8
+name: exp
