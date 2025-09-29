@@ -2,10 +2,10 @@
 task: detect
 mode: train
 model: yolo11n.pt
-data: training/configs/data.yaml
+data: configs/datav8.yaml
 epochs: 5
-imgsz: 640
+imgsz: 512
 batch: 16
 seed: 42
-project: training/runs/v11
+project: runs/v11
 name: exp
