@@ -1,18 +1,10 @@
 venv/
 .idea/
 .vscode
-legacy/*
-legacy/datasets/yolo_training_filter/
-legacy/datasets/yolo_training_full/
-legacy/datasets/yolo_training/
-legacy/datasets/ppm/
-legacy/datasets/jpg/
-
-legacy/notebook/input_videos
-
-legacy/yolo_training/yolov5
-legacy/yolo_training_v8/runs
-legacy/runs
+legacy/
+gtsrb/
+yolov5/
+#runs/
 
 *.pt
 *.zip
