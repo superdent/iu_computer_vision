@@ -2,7 +2,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-PLATFORM=mac; MODEL=v5; EPOCHS=1; BATCH=16; IMG=512; SEED=42
+PLATFORM=mac; MODEL=v5; EPOCHS=5; BATCH=16; IMG=512; SEED=42
 NAME="${MODEL}_${PLATFORM}_ep${EPOCHS}_b${BATCH}_img${IMG}_seed${SEED}"
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
