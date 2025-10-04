@@ -1,13 +1,42 @@
-# Verkehrszeichenerkennung – Projektnotizen
+# Verkehrszeichenerkennung
+1. Verwendung des GTSRB-Datensatzes
+1. Training verschiedener YOLO-Modelle
+1. Videoanalyse mit trainierten Modellen
+1. Verwendung eigender Bild-Daten
 
-## Stand: Vorbereitung, Datensatzaufbereitung und Training
+### 1. Ordnerstruktur anlegen
+- training
+- training/gtsrb für den Datensatz gtsrb und die Aufbereitung der Daten
+- training/configs für die Trainingskonfiguration von Yolo
+- training/requirements für Python requirements-Dateien
+- training/scripts für Trainings-Startskripte
+- Mehrere virtuelle Environments werden benötigt und sukzessive unterhalb von training angelegt
 
-### 1. Training
-- Download GTSRB-Datensatz
-- Aufbereitung des Datensatzes für die Verarbeitung mit Yolo -> Konvertierung in Yolo-Datei-Struktur
+### 2. Verwendung des GTSRB-Datensatzes:
+- Unterordner training/gtsrb
+- Download des GTSRB-Datensatzes (GTSRB-Training_fixed) über https://benchmark.ini.rub.de/gtsrb_dataset.html#Downloads nach training/gtsrb/zip
+- Virtuelles Environment für Datenaufbereitung anlegen
+- Erstellung passender Skripte für die Aufbereitung des Datensatzes zur Verarbeitung mit Yolo
+- Yolo-Aufbereitung nach training/gtsrb/yolo_training
+```
+pip install -r ./requirements requirements-tools.txt 
+```
+
+### 2. Training
+- Unterordner "training"
 - Einrichtung Virtueller Environments für Yolov5 und Yolov8
 - Download Yolov5 + Installation im V5-Environment
 - Installation Yolov8 im V8-Environment
+
+#### Setup und Start des Trainings auf Windows:
+```
+python -m venv venv-win-3.12-v5
+python -m venv venv-win-3.12-v8
+git clone https://github.com/ultralytics/yolov5.git training/yolov5
+.\venv-win-3.12-v5\Scripts\activate
+pip install -r .\yolov5\requirements.txt
+.\scripts\train_win_v5.ps1
+```
 
 ### 1. Einrichtung des Projekts
 - Es wurde ein lokales Python-Projekt angelegt.
