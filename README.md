@@ -2,8 +2,15 @@
 
 ## Stand: Vorbereitung, Datensatzaufbereitung und Training
 
+### 1. Training
+- Download GTSRB-Datensatz
+- Aufbereitung des Datensatzes für die Verarbeitung mit Yolo -> Konvertierung in Yolo-Datei-Struktur
+- Einrichtung Virtueller Environments für Yolov5 und Yolov8
+- Download Yolov5 + Installation im V5-Environment
+- Installation Yolov8 im V8-Environment
+
 ### 1. Einrichtung des Projekts
-- Es wurde ein lokales Python-Projekt in **PyCharm** angelegt.
+- Es wurde ein lokales Python-Projekt angelegt.
 - Ziel: Entwicklung eines Systems zur Verkehrszeichenerkennung in Videos.
 - Innerhalb des Projekts wurde ein **Jupyter Notebook** erstellt, um erste Tests durchzuführen.
 

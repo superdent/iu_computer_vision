@@ -1,5 +1,5 @@
 #System
-venv/
+venv-win*
 .idea/
 .vscode
 .DS_Store
