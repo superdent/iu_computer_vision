@@ -6,8 +6,8 @@ from pathlib import Path
 from collections import defaultdict
 
 # HART KODIERTE PFADANGABEN
-INPUT_ROOT = Path("./datasets/ppm")
-OUTPUT_ROOT = Path("./datasets/yolo_training")
+INPUT_ROOT = Path("./gtsrb/ppm")
+OUTPUT_ROOT = Path("./gtsrb/yolo_training")
 TRAIN_RATIO = 0.8
 RANDOM_SEED = 42
 CLASS_FILTER = []  # z.B. [0, 1, 14] oder [] für alle Klassen
