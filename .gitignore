@@ -1,5 +1,6 @@
 #System
 venv-win*
+venv_tools/
 .idea/
 .vscode
 .DS_Store
