@@ -78,4 +78,4 @@ Das endgültige Training wurde mit ausgewählten Klassen durchgeführt.
 - Im Notebook wurden mit **OpenCV** einzelne Frames aus dem Video extrahiert.
 - Ziel: Grundlagen verstehen (Frameverarbeitung, Bildformate, Timing).
 
-## 5. Colab Git-Test
+## 5. Colab Git-Test 2
