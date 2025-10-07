@@ -1,0 +1,50 @@
+# training/configs/datav5_colab.yaml  (YOLOv5)
+path: /content/yolo_training
+train: train/images
+val:   val/images
+
+nc: 43
+names:
+  - cls0
+  - cls1
+  - cls2
+  - cls3
+  - cls4
+  - cls5
+  - cls6
+  - cls7
+  - cls8
+  - cls9
+  - cls10
+  - cls11
+  - cls12
+  - cls13
+  - cls14
+  - cls15
+  - cls16
+  - cls17
+  - cls18
+  - cls19
+  - cls20
+  - cls21
+  - cls22
+  - cls23
+  - cls24
+  - cls25
+  - cls26
+  - cls27
+  - cls28
+  - cls29
+  - cls30
+  - cls31
+  - cls32
+  - cls33
+  - cls34
+  - cls35
+  - cls36
+  - cls37
+  - cls38
+  - cls39
+  - cls40
+  - cls41
+  - cls42
