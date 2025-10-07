@@ -4,6 +4,7 @@ venv_tools/
 .idea/
 .vscode
 .DS_Store
+*.gsheet
 
 #Legacy
 legacy/
