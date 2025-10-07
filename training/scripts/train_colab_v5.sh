@@ -13,7 +13,7 @@ DATA_V5_YAML="$REPO_ROOT/configs/datav5_colab.yaml"
 cd "/content/yolov5"
 PROJECT="$REPO_ROOT/runs/${MODEL}/${PLATFORM}"
 
-python train.py \
+python -u train.py \
   --weights yolov5n.pt \
   --data "$DATA_V5_YAML" \
   --epochs "$EPOCHS" --imgsz "$IMG" --batch "$BATCH" --seed "$SEED" \
