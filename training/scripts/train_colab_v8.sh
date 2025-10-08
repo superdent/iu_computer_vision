@@ -3,8 +3,9 @@
 set -euo pipefail
 PLATFORM=colab; MODEL=v8
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 cd "$REPO_ROOT"
 PROJECT="$REPO_ROOT/training/runs/${MODEL}/${PLATFORM}"
 NAME="${MODEL}_${PLATFORM}"
-yolo detect train cfg=training/configs/yolov8_colab.yaml project="$PROJECT" name="$NAME"
+pwd
+yolo detect train cfg=$REPO_ROOT/configs/yolov8_colab.yaml project="$PROJECT" name="$NAME"

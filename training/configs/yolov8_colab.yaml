@@ -2,7 +2,7 @@
 task: detect
 mode: train
 model: yolov8n.pt
-data: training/configs/datav8_colab.yaml
+data: configs/datav8_colab.yaml
 epochs: 5
 imgsz: 512
 batch: 16

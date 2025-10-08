@@ -1,7 +1,7 @@
 task: detect
 mode: train
 model: yolov8n.pt
-data: training/configs/datav8_colab.yaml
+data: /configs/datav8_colab.yaml
 epochs: 5
 time: null
 patience: 100
@@ -12,8 +12,8 @@ save_period: -1
 cache: false
 device: null
 workers: 8
-project: /content/drive/MyDrive/develop/iu_computer_vision/training/runs/v8/colab
-name: v8_colab3
+project: /content/drive/MyDrive/develop/iu_computer_vision/training/training/runs/v8/colab
+name: v8_colab
 exist_ok: false
 pretrained: true
 optimizer: auto
@@ -103,4 +103,4 @@ auto_augment: randaugment
 erasing: 0.4
 cfg: null
 tracker: botsort.yaml
-save_dir: /content/drive/MyDrive/develop/iu_computer_vision/training/runs/v8/colab/v8_colab3
+save_dir: /content/drive/MyDrive/develop/iu_computer_vision/training/training/runs/v8/colab/v8_colab
