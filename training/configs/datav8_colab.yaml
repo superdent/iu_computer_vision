@@ -1,6 +1,7 @@
-# training/configs/datav8_colab.yaml  (YOLOv8)
+# training/configs/datav8_colab.yaml  (YOLOv8/YOLOv11)
+path: training/content/yolo_training
 train: train/images
-val:   val/images
+val: val/images
 
 nc: 43
 names:
