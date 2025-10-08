@@ -5,7 +5,7 @@ PLATFORM=colab; MODEL=v8
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 cd "$REPO_ROOT"
-PROJECT="$REPO_ROOT/training/runs/${MODEL}/${PLATFORM}"
+PROJECT="$REPO_ROOT/runs/${MODEL}/${PLATFORM}"
 NAME="${MODEL}_${PLATFORM}"
 pwd
 yolo detect train cfg=$REPO_ROOT/configs/yolov8_colab.yaml project="$PROJECT" name="$NAME"
