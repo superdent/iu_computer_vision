@@ -1,7 +1,7 @@
 # training/configs/yolov11_colab.yaml
 task: detect
 mode: train
-model: yolov11n.pt
+model: yolo11n.pt
 data: configs/datav8_colab.yaml
 epochs: 5
 imgsz: 512
