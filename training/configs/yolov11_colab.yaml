@@ -1,0 +1,11 @@
+# training/configs/yolov11_colab.yaml
+task: detect
+mode: train
+model: yolov11n.pt
+data: configs/datav8_colab.yaml
+epochs: 5
+imgsz: 512
+batch: 16
+seed: 42
+project: runs/v11
+name: exp

@@ -7,4 +7,5 @@ REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 cd "$REPO_ROOT"
 PROJECT="$REPO_ROOT/runs/${MODEL}/${PLATFORM}"
 NAME="${MODEL}_${PLATFORM}"
-yolo detect train cfg=training/configs/yolov11.yaml project="$PROJECT" name="$NAME"
+pwd
+yolo detect train cfg=$REPO_ROOT/configs/yolov11_colab.yaml project="$PROJECT" name="$NAME"
