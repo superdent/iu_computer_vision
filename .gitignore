@@ -1,6 +1,7 @@
 #System
 venv-win*
 venv_tools/
+venv_video_gen/
 .idea/
 .vscode
 .DS_Store
@@ -12,6 +13,7 @@ legacy/
 #Datensatz
 training/yolov5/
 training/gtsrb/zip/data/
+training/SynsetSignsetGermany/
 *.ppm
 **/GT-?????*.csv
 ?????_?????_?????.jpg
@@ -22,5 +24,7 @@ training/gtsrb/zip/data/
 labels.cache
 *.pt
 *.zip
-*.mp4
 
+#Video-Generierung
+analysis/video_gen/images/
+*.mp4
