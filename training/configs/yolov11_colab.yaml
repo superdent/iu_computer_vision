@@ -3,7 +3,7 @@ task: detect
 mode: train
 model: yolo11n.pt
 data: configs/datav8_colab.yaml
-epochs: 5
+epochs: 50
 imgsz: 512
 batch: 16
 seed: 42
