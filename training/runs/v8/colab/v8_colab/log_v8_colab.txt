@@ -1,0 +1,129 @@
+/content/drive/MyDrive/develop/iu_computer_vision/training
+Overriding /usr/local/lib/python3.12/dist-packages/ultralytics/cfg/default.yaml with /content/drive/MyDrive/develop/iu_computer_vision/training/configs/yolov8_colab.yaml
+Ultralytics 8.3.207 🚀 Python-3.12.11 torch-2.8.0+cu126 CUDA:0 (Tesla T4, 15095MiB)
+engine/trainer: agnostic_nms=False, amp=True, augment=False, auto_augment=randaugment, batch=16, bgr=0.0, box=7.5, cache=False, cfg=None, classes=None, close_mosaic=10, cls=0.5, compile=False, conf=None, copy_paste=0.0, copy_paste_mode=flip, cos_lr=False, cutmix=0.0, data=configs/datav8_colab.yaml, degrees=0.0, deterministic=True, device=None, dfl=1.5, dnn=False, dropout=0.0, dynamic=False, embed=None, epochs=5, erasing=0.4, exist_ok=False, fliplr=0.5, flipud=0.0, format=torchscript, fraction=1.0, freeze=None, half=False, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, imgsz=512, int8=False, iou=0.7, keras=False, kobj=1.0, line_width=None, lr0=0.01, lrf=0.01, mask_ratio=4, max_det=300, mixup=0.0, mode=train, model=yolov8n.pt, momentum=0.937, mosaic=1.0, multi_scale=False, name=v8_colab, nbs=64, nms=False, opset=None, optimize=False, optimizer=auto, overlap_mask=True, patience=100, perspective=0.0, plots=True, pose=12.0, pretrained=True, profile=False, project=/content/drive/MyDrive/develop/iu_computer_vision/training/runs/v8/colab, rect=False, resume=False, retina_masks=False, save=True, save_conf=False, save_crop=False, save_dir=/content/drive/MyDrive/develop/iu_computer_vision/training/runs/v8/colab/v8_colab, save_frames=False, save_json=False, save_period=-1, save_txt=False, scale=0.5, seed=42, shear=0.0, show=False, show_boxes=True, show_conf=True, show_labels=True, simplify=True, single_cls=False, source=None, split=val, stream_buffer=False, task=detect, time=None, tracker=botsort.yaml, translate=0.1, val=True, verbose=True, vid_stride=1, visualize=False, warmup_bias_lr=0.1, warmup_epochs=3.0, warmup_momentum=0.8, weight_decay=0.0005, workers=8, workspace=None
+Overriding model.yaml nc=80 with nc=43
+
+                   from  n    params  module                                       arguments                     
+  0                  -1  1       464  ultralytics.nn.modules.conv.Conv             [3, 16, 3, 2]                 
+  1                  -1  1      4672  ultralytics.nn.modules.conv.Conv             [16, 32, 3, 2]                
+  2                  -1  1      7360  ultralytics.nn.modules.block.C2f             [32, 32, 1, True]             
+  3                  -1  1     18560  ultralytics.nn.modules.conv.Conv             [32, 64, 3, 2]                
+  4                  -1  2     49664  ultralytics.nn.modules.block.C2f             [64, 64, 2, True]             
+  5                  -1  1     73984  ultralytics.nn.modules.conv.Conv             [64, 128, 3, 2]               
+  6                  -1  2    197632  ultralytics.nn.modules.block.C2f             [128, 128, 2, True]           
+  7                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]              
+  8                  -1  1    460288  ultralytics.nn.modules.block.C2f             [256, 256, 1, True]           
+  9                  -1  1    164608  ultralytics.nn.modules.block.SPPF            [256, 256, 5]                 
+ 10                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 11             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 12                  -1  1    148224  ultralytics.nn.modules.block.C2f             [384, 128, 1]                 
+ 13                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 14             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 15                  -1  1     37248  ultralytics.nn.modules.block.C2f             [192, 64, 1]                  
+ 16                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]                
+ 17            [-1, 12]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 18                  -1  1    123648  ultralytics.nn.modules.block.C2f             [192, 128, 1]                 
+ 19                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]              
+ 20             [-1, 9]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 21                  -1  1    493056  ultralytics.nn.modules.block.C2f             [384, 256, 1]                 
+ 22        [15, 18, 21]  1    759697  ultralytics.nn.modules.head.Detect           [43, [64, 128, 256]]          
+Model summary: 129 layers, 3,019,233 parameters, 3,019,217 gradients, 8.2 GFLOPs
+
+Transferred 319/355 items from pretrained weights
+Freezing layer 'model.22.dfl.conv.weight'
+AMP: running Automatic Mixed Precision (AMP) checks...
+AMP: checks passed ✅
+train: Fast image access ✅ (ping: 0.0±0.0 ms, read: 43.6±11.6 MB/s, size: 1.0 KB)
+train: Scanning /content/yolo_training/train/labels.cache... 21312 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 21312/21312 228.0Mit/s 0.0s
+albumentations: Blur(p=0.01, blur_limit=(3, 7)), MedianBlur(p=0.01, blur_limit=(3, 7)), ToGray(p=0.01, method='weighted_average', num_output_channels=3), CLAHE(p=0.01, clip_limit=(1.0, 4.0), tile_grid_size=(8, 8))
+val: Fast image access ✅ (ping: 0.0±0.0 ms, read: 64.1±59.1 MB/s, size: 1.6 KB)
+val: Scanning /content/yolo_training/val/labels.cache... 5328 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 5328/5328 37.3Mit/s 0.0s
+Plotting labels to /content/drive/MyDrive/develop/iu_computer_vision/training/runs/v8/colab/v8_colab/labels.jpg... 
+optimizer: 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically... 
+optimizer: AdamW(lr=0.000213, momentum=0.9) with parameter groups 57 weight(decay=0.0), 64 weight(decay=0.0005), 63 bias(decay=0.0)
+Image sizes 512 train, 512 val
+Using 2 dataloader workers
+Logging results to /content/drive/MyDrive/develop/iu_computer_vision/training/runs/v8/colab/v8_colab
+Starting training for 5 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+        1/5      1.33G     0.8277      3.206      1.282         43        512: 100% ━━━━━━━━━━━━ 1332/1332 5.2it/s 4:16
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 167/167 6.0it/s 27.8s
+                   all       5328       5328      0.755      0.368      0.413      0.341
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+        2/5      1.92G     0.6053      1.738      1.099         41        512: 100% ━━━━━━━━━━━━ 1332/1332 5.2it/s 4:14
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 167/167 6.2it/s 26.9s
+                   all       5328       5328      0.807      0.733      0.808      0.704
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+        3/5      1.92G      0.549      1.274       1.05         46        512: 100% ━━━━━━━━━━━━ 1332/1332 5.4it/s 4:08
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 167/167 6.2it/s 26.9s
+                   all       5328       5328       0.81      0.864      0.879      0.762
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+        4/5      1.93G     0.5114      1.073      1.026         31        512: 100% ━━━━━━━━━━━━ 1332/1332 5.3it/s 4:09
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 167/167 6.2it/s 27.1s
+                   all       5328       5328       0.87      0.934      0.927      0.863
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+        5/5      1.93G     0.4849     0.9677      1.013         41        512: 100% ━━━━━━━━━━━━ 1332/1332 5.4it/s 4:07
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 167/167 6.2it/s 26.8s
+                   all       5328       5328      0.899      0.943      0.938      0.852
+
+5 epochs completed in 0.387 hours.
+Optimizer stripped from /content/drive/MyDrive/develop/iu_computer_vision/training/runs/v8/colab/v8_colab/weights/last.pt, 6.2MB
+Optimizer stripped from /content/drive/MyDrive/develop/iu_computer_vision/training/runs/v8/colab/v8_colab/weights/best.pt, 6.2MB
+
+Validating /content/drive/MyDrive/develop/iu_computer_vision/training/runs/v8/colab/v8_colab/weights/best.pt...
+Ultralytics 8.3.207 🚀 Python-3.12.11 torch-2.8.0+cu126 CUDA:0 (Tesla T4, 15095MiB)
+Model summary (fused): 72 layers, 3,014,033 parameters, 0 gradients, 8.1 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 167/167 5.7it/s 29.3s
+                   all       5328       5328       0.87      0.933      0.927      0.863
+                  cls0         30         30      0.981      0.933       0.99      0.923
+                  cls1        300        300       0.86      0.993      0.989      0.915
+                  cls2        300        300       0.91       0.97      0.988      0.912
+                  cls3        192        192      0.983      0.902      0.986        0.9
+                  cls4        264        264      0.962      0.967      0.992      0.924
+                  cls5        252        252      0.881      0.937      0.974      0.889
+                  cls6         60         60      0.977          1      0.995      0.903
+                  cls7        192        192      0.902      0.927       0.97      0.905
+                  cls8        192        192      0.971      0.818      0.969      0.889
+                  cls9        198        198      0.986      0.995      0.995      0.925
+                 cls10        270        270      0.994      0.993      0.995      0.919
+                 cls11        180        180      0.982      0.994      0.995      0.946
+                 cls12        282        282      0.998          1      0.995      0.931
+                 cls13        288        288      0.999          1      0.995      0.917
+                 cls14        108        108      0.992          1      0.995       0.96
+                 cls15         84         84      0.993          1      0.995      0.912
+                 cls16         60         60          1      0.983      0.995      0.947
+                 cls17        150        150      0.985          1      0.995      0.889
+                 cls18        162        162      0.987      0.973      0.994      0.944
+                 cls19         30         30      0.577      0.767      0.779      0.744
+                 cls20         48         48      0.724      0.854      0.889      0.787
+                 cls21         48         48      0.942          1      0.995       0.95
+                 cls22         54         54      0.967          1      0.995      0.936
+                 cls23         72         72      0.884      0.958      0.981      0.933
+                 cls24         36         36      0.897      0.944      0.983      0.945
+                 cls25        204        204      0.992      0.966      0.993       0.94
+                 cls26         84         84      0.923          1      0.994      0.921
+                 cls27         36         36          1      0.927       0.98      0.935
+                 cls28         72         72       0.84      0.958      0.975      0.943
+                 cls29         36         36      0.894          1      0.992       0.95
+                 cls30         60         60      0.993        0.9      0.989      0.932
+                 cls31        108        108       0.99      0.961      0.994      0.932
+                 cls32         36         36       0.87       0.93      0.972      0.864
+                 cls33         96         96      0.643      0.969      0.835      0.784
+                 cls34         60         60      0.367       0.85      0.526      0.482
+                 cls35        162        162      0.989          1      0.995      0.913
+                 cls36         54         54      0.609      0.982      0.629      0.578
+                 cls37         30         30      0.387      0.756      0.414      0.393
+                 cls38        276        276      0.866          1      0.965      0.893
+                 cls39         42         42      0.288      0.238      0.312      0.303
+                 cls40         48         48      0.979      0.988      0.994       0.96
+                 cls41         36         36      0.494      0.944      0.917      0.831
+                 cls42         36         36      0.968      0.843      0.957      0.812
+Speed: 0.1ms preprocess, 1.3ms inference, 0.0ms loss, 1.4ms postprocess per image
+Results saved to /content/drive/MyDrive/develop/iu_computer_vision/training/runs/v8/colab/v8_colab
+💡 Learn more at https://docs.ultralytics.com/modes/train
