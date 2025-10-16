@@ -19,6 +19,8 @@ ORDER = "shuffle"                # 'shuffle' oder 'sequential'
 MAX_IMAGES = None                # z.B. 20 für Test
 SEED = 42
 FADE_IN_OUT = True
+SOLID_BG = True
+BG_COLOR = (255, 255, 255)  # Weiß (B,G,R in OpenCV)
 
 random.seed(SEED)
 PATH_OUTPUT.mkdir(parents=True, exist_ok=True)
@@ -27,6 +29,10 @@ PATH_OUTPUT.mkdir(parents=True, exist_ok=True)
 # Hilfsfunktionen
 # ==========================
 def generate_background(size, grid, color_range):
+    if SOLID_BG:
+        w, h = size
+        return np.full((h, w, 3), BG_COLOR, dtype=np.uint8)
+
     w, h = size
     cols, rows = grid
     tile_w, tile_h = w // cols, h // rows

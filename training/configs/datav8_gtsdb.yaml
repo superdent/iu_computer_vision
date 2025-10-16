@@ -1,0 +1,6 @@
+# configs/datav8_gtsdb.yaml
+path: datasets/gtsdb/yolo_training
+train: train/images
+val: val/images
+nc: 1
+names: ['traffic sign']
