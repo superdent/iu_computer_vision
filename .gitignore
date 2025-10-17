@@ -13,8 +13,8 @@ legacy/
 
 #Datensatz
 training/yolov5/
-training/datasets/gtsrb/zip/data/
-training/datasets/SynsetSignsetGermany/
+training/datasets
+training/datasets
 
 *.ppm
 **/GT-?????*.csv

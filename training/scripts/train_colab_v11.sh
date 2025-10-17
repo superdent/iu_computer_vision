@@ -8,4 +8,4 @@ cd "$REPO_ROOT"
 PROJECT="$REPO_ROOT/runs/${MODEL}/${PLATFORM}"
 NAME="${MODEL}_${PLATFORM}"
 pwd
-yolo detect train cfg=$REPO_ROOT/configs/yolov11_colab.yaml project="$PROJECT" name="$NAME"
+yolo classify train cfg=$REPO_ROOT/configs/yolov11_colab.yaml project="$PROJECT" name="$NAME"
