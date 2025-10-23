@@ -1,11 +1,11 @@
 # configs/yolov11_gtsdb.yaml
 task: detect
 mode: train
-model: yolo11n.pt
+model: C:\Develop\Python\PyCharmProjects\iu_computer_vision\training\runs\gtsdb\v11\windows\v11_windows\weights\best.pt
 pretrained: true
-data: configs/datav8_gtsdb.yaml
+data: configs/datav8_fussgaenger.yaml
 epochs: 300
-patience: 5
+patience: 30
 imgsz: 1280
 batch: 16
 seed: 42
