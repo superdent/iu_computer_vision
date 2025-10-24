@@ -5,10 +5,10 @@ model: yolo11n.pt
 pretrained: true
 data: configs/datav8_gtsdb.yaml
 epochs: 300
-patience: 5
+patience: 10
 imgsz: 1280
 batch: 16
-seed: 42
+seed: 42,
 lr0: 0.001
 lrf: 0.01
 rect: true
