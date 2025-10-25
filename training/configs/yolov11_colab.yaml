@@ -4,7 +4,7 @@ mode: train
 model: yolo11n-cls.pt
 data: /content/yolo_cls
 epochs: 150
-patience: 5            # Early Stopping
+patience: 10            # Early Stopping
 imgsz: 512
 batch: 16
 seed: 42
