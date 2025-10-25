@@ -13,8 +13,7 @@ legacy/
 
 #Datensatz
 training/yolov5/
-training/datasets
-training/datasets
+training/datasets/
 
 *.ppm
 **/GT-?????*.csv
